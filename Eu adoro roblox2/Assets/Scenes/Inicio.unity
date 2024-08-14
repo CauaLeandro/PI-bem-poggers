@@ -613,7 +613,7 @@ GameObject:
   - component: {fileID: 282438293}
   m_Layer: 0
   m_Name: terra (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1064,6 +1064,7 @@ GameObject:
   - component: {fileID: 380052686}
   - component: {fileID: 380052685}
   - component: {fileID: 380052684}
+  - component: {fileID: 380052688}
   m_Layer: 0
   m_Name: BACKGROUND (1)
   m_TagString: Untagged
@@ -1147,6 +1148,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &380052688
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380052683}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 8b08ede1bd1a47c46a12292ef092708c, type: 2}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 16, y: 16}
+    newSize: {x: 16, y: 16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16, y: 16}
+  m_EdgeRadius: 0
 --- !u!1 &423533039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,7 +1270,7 @@ GameObject:
   - component: {fileID: 427250075}
   m_Layer: 0
   m_Name: terra (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3908,6 +3935,7 @@ GameObject:
   - component: {fileID: 1387893695}
   - component: {fileID: 1387893694}
   - component: {fileID: 1387893693}
+  - component: {fileID: 1387893696}
   m_Layer: 0
   m_Name: BACKGROUND (2)
   m_TagString: Untagged
@@ -3991,6 +4019,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1387893696
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387893692}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 8b08ede1bd1a47c46a12292ef092708c, type: 2}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 16, y: 16}
+    newSize: {x: 16, y: 16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16, y: 16}
+  m_EdgeRadius: 0
 --- !u!1 &1389605306
 GameObject:
   m_ObjectHideFlags: 0
@@ -4254,6 +4308,7 @@ GameObject:
   - component: {fileID: 1395230635}
   - component: {fileID: 1395230634}
   - component: {fileID: 1395230633}
+  - component: {fileID: 1395230637}
   m_Layer: 0
   m_Name: BACKGROUND (3)
   m_TagString: Untagged
@@ -4337,6 +4392,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1395230637
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395230632}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 8b08ede1bd1a47c46a12292ef092708c, type: 2}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 16, y: 16}
+    newSize: {x: 16, y: 16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16, y: 16}
+  m_EdgeRadius: 0
 --- !u!1 &1435948897
 GameObject:
   m_ObjectHideFlags: 0
@@ -5823,7 +5904,7 @@ GameObject:
   - component: {fileID: 1961575099}
   m_Layer: 0
   m_Name: terra
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5990,6 +6071,7 @@ GameObject:
   - component: {fileID: 2018572690}
   - component: {fileID: 2018572689}
   - component: {fileID: 2018572688}
+  - component: {fileID: 2018572692}
   m_Layer: 0
   m_Name: BACKGROUND (4)
   m_TagString: Untagged
@@ -6073,6 +6155,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2018572692
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018572687}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 8b08ede1bd1a47c46a12292ef092708c, type: 2}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 16, y: 16}
+    newSize: {x: 16, y: 16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16, y: 16}
+  m_EdgeRadius: 0
 --- !u!1 &2033255462
 GameObject:
   m_ObjectHideFlags: 0
@@ -6084,6 +6192,7 @@ GameObject:
   - component: {fileID: 2033255464}
   - component: {fileID: 2033255463}
   - component: {fileID: 2033255465}
+  - component: {fileID: 2033255467}
   m_Layer: 0
   m_Name: BACKGROUND
   m_TagString: Untagged
@@ -6167,6 +6276,32 @@ Skybox:
   m_GameObject: {fileID: 2033255462}
   m_Enabled: 1
   m_CustomSkybox: {fileID: 0}
+--- !u!61 &2033255467
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033255462}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 8b08ede1bd1a47c46a12292ef092708c, type: 2}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 16, y: 16}
+    newSize: {x: 16, y: 16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16, y: 16}
+  m_EdgeRadius: 0
 --- !u!1 &2034110733
 GameObject:
   m_ObjectHideFlags: 0
