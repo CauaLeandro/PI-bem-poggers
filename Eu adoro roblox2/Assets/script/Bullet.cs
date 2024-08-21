@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public int damage = 1;
+    public float projectileForce = 500f;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +21,6 @@ public class Bullet : MonoBehaviour
     {
         Destroy(gameObject, 1.0f);
     }
-    private void OnBecameVisible()
-    {
-
-    }
+  
 
 }
