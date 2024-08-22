@@ -1,8 +1,10 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -20,6 +22,7 @@ public class Player : MonoBehaviour
     float horizontal;
     public Rigidbody2D body;
 
+    public GameObject imagem;
     Collider2D footCollision;
     int direction = 1;
     // Start is called before the first frame update
@@ -93,10 +96,17 @@ public class Player : MonoBehaviour
             Life -= collision.gameObject.GetComponent<BossLegal>().damage;
             if (Life <= 0)
             {
-                Destroy(gameObject);
+                imagem.SetActive(true);
+                Time.timeScale = 0f;
+
             }
         }
        
+    }
+    public void Recomecar()
+    {
+        SceneManager.LoadScene("boss battle");
+        Time.timeScale = 1.0f;
     }
     private void OnCollisionExit2D(Collision2D collision)
     {

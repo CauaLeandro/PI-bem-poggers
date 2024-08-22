@@ -24,14 +24,14 @@ public class BossLegal : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
-        if (!collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground"))
         {
             direction = -1;
 
         }
-       else if (!collision.gameObject.CompareTag("Wall"))
+       if (collision.gameObject.CompareTag("Wall"))
         {
-            direction2 = 1;
+            direction2 = -1;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
