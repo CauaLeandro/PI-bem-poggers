@@ -23,6 +23,7 @@ public class BossLegal : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
         if (!collision.gameObject.CompareTag("Ground"))
         {
             direction = -1;
@@ -35,6 +36,10 @@ public class BossLegal : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Wall"))
+        {
+            direction *= -1;
+        }
         if (collision.CompareTag("Bullet"))
         {//Aqui o collision representa o Bullet
             Life -= collision.gameObject.GetComponent<Bullet>().damage;

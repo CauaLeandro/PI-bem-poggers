@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7709053672106055097}
   m_Layer: 0
   m_Name: bullet oswaldo 1
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,3 +147,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 3
+  projectileForce: 500
