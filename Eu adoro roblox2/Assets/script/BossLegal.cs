@@ -1,15 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Enemy : MonoBehaviour
+using Unity.VisualScripting;
+public class BossLegal : MonoBehaviour
 {
-    public int life = 2;
     public int damage = 2;
     public float speed;
-    public GameObject coin;
     int direction = -1;
-
+    int direction2 = 1;
+    private int Life = 20;
     Rigidbody2D body;
     // Start is called before the first frame update
     void Start()
@@ -26,25 +25,26 @@ public class Enemy : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("Ground"))
         {
-            direction *= -1;
+            direction = -1;
+
+        }
+       else if (!collision.gameObject.CompareTag("Wall"))
+        {
+            direction2 = 1;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Bullet"))
         {//Aqui o collision representa o Bullet
-            life -= collision.gameObject.GetComponent<Bullet>().damage;
+            Life -= collision.gameObject.GetComponent<Bullet>().damage;
             Destroy(collision.gameObject);//Esse destroi o tiro
-            if (life <= 0)
+            if (Life <= 0)
             {
-                Instantiate(coin, transform.position, transform.rotation);
+
                 Destroy(gameObject);//Esse destroi o inimigo
             }
 
         }
     }
-
-
 }
-
-

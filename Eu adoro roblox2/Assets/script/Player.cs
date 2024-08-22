@@ -10,14 +10,9 @@ public class Player : MonoBehaviour
     public UnityEvent OnPlayerKillEnemy;
     public UnityEvent OnPause;
     public UnityEvent OnUnPause;
-
-
-
-
-
     public int score;
-    public int life = 3;
-    public int lifeMax;
+    public float Life = 3f;
+    public float lifeMax;
     public GameObject bullet;
     public Transform foot;
     bool groundCheck;
@@ -30,7 +25,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lifeMax = life;
+        lifeMax = Life;
     }
 
     // Update is called once per frame
@@ -90,60 +85,24 @@ public class Player : MonoBehaviour
         }
 
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if(collision.gameObject.CompareTag("Boss"))
         {
-            //life--;
-            //life -= 1;
-            //life = life -1;
-            life -= collision.gameObject.GetComponent<Enemy>().damage;
-            if (life <= 0)
+            Life -= collision.gameObject.GetComponent<BossLegal>().damage;
+            if (Life <= 0)
             {
                 Destroy(gameObject);
             }
         }
-
-    }
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-
+       
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
 
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        /*
-        if (collision.CompareTag("Coin"))
-        {
-            score += 5;//score = score +5;
-            Destroy(collision.gameObject);
-        }
-        if (collision.CompareTag("Divisor"))
-        {
-            score /= 2;//score = score / 2;
-            Destroy(collision.gameObject);
-        }
-        */
-        switch (collision.tag)
-        {
-            case "Coin":
-                //Aqui é o efeito do Coin
-                score += 5;//score = score +5;
-                Destroy(collision.gameObject);
-                break;
-            case "Divisor":
-                //Aqui é o efeito do Divisor
-                score /= 2;//score = score / 2;
-                Destroy(collision.gameObject);
-                break;
-            default:
-
-                break;
-
-        }
-    }
+    
+    
 }
 

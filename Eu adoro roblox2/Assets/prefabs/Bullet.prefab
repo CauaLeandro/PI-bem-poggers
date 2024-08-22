@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3469772045459045397}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.19, y: -1.8361993, z: 0}
-  m_LocalScale: {x: 0.18313625, y: 0.09656276, z: 0.26638}
+  m_LocalPosition: {x: -6.042, y: -1.858, z: 0}
+  m_LocalScale: {x: 0.11742697, y: 0.11048039, z: 0.26638}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -96,7 +96,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 3469772045459045397}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8b08ede1bd1a47c46a12292ef092708c, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -125,7 +125,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4290d549890506545a952d504d53b02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 3
+  damage: 2
+  projectileForce: 500
+  rb: {fileID: 2925505629889753167}
+  firePoint: {fileID: 0}
 --- !u!50 &2925505629889753167
 Rigidbody2D:
   serializedVersion: 4
@@ -141,7 +144,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
