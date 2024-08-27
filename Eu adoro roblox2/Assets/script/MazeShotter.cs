@@ -13,6 +13,8 @@ public class MazeShotter : MonoBehaviour
     private Vector2 MoveDirection;
     public Rigidbody2D rb;
 
+    public MazeWeapon weapon;
+
 
 
     private Vector2 moveDirection;
@@ -33,6 +35,12 @@ public class MazeShotter : MonoBehaviour
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            //MazeWeapon.Fire();
+
+        }
         MoveDirection = new Vector2(moveX, moveY);
         mousePosition = sceneCamera.ScreenToWorldPoint(Input.mousePosition);
     }
@@ -44,7 +52,7 @@ public class MazeShotter : MonoBehaviour
         // gira o player
 
         Vector2 aimDirection = mousePosition - rb.position;
-        float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
+        float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 0f;
         rb.rotation = aimAngle;
     }
 }
