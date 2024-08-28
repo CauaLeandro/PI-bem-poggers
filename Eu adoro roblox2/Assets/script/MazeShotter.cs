@@ -15,6 +15,8 @@ public class MazeShotter : MonoBehaviour
 
     public MazeWeapon weapon;
 
+    
+
 
 
     private Vector2 moveDirection;
