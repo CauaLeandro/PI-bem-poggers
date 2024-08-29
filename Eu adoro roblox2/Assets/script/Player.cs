@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     public float speed = 5, jumpStrength = 5, bulletSpeed = 8;
     float horizontal;
     public Rigidbody2D body;
-
+    public GameObject restartText;
     public GameObject imagem;
     Collider2D footCollision;
     int direction = 1;
@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         lifeMax = Life;
+        restartText.SetActive(false);
     }
 
     // Update is called once per frame
@@ -96,17 +97,21 @@ public class Player : MonoBehaviour
             Life -= collision.gameObject.GetComponent<BossLegal>().damage;
             if (Life <= 0)
             {
-                imagem.SetActive(true);
+                gameObject.SetActive(true);
                 Time.timeScale = 0f;
-
+                GameOver();
             }
         }
        
     }
+    void GameOver()
+    {
+        restartText.SetActive(true);
+    }
     public void Recomecar()
     {
         SceneManager.LoadScene("boss battle");
-        Time.timeScale = 1.0f;
+        Time.timeScale = 1F;
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
