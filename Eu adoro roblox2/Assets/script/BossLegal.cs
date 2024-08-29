@@ -1,55 +1,58 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.VisualScripting;
+
 public class BossLegal : MonoBehaviour
 {
     public int damage = 2;
     public float speed;
-    int direction = -1;
-    int direction2 = 1;
     public int Life = 70;
-    Rigidbody2D body;
-    // Start is called before the first frame update
+    private int direction = -1; // Inicializa com uma direção padrão
+    private Rigidbody2D body;
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        // Define a velocidade inicial do Boss
         body.velocity = new Vector2(speed * direction, body.velocity.y);
     }
+
+    void Update()
+    {
+        // Move o Boss na direção atual
+        body.velocity = new Vector2(speed * direction, body.velocity.y);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        // Inverte a direção quando colide com o chão ou a parede
         
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            direction = -1;
-
-        }
-       if (collision.gameObject.CompareTag("Wall"))
-        {
-            direction2 = -1;
-        }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Inverte a direção ao colidir com a parede
         if (collision.CompareTag("Wall"))
         {
-            direction *= -1;
+            ReverseDirection();
         }
+
+        // Diminui a vida do Boss ao ser atingido por uma bala
         if (collision.CompareTag("Bullet"))
-        {//Aqui o collision representa o Bullet
+        {
             Life -= collision.gameObject.GetComponent<Bullet>().damage;
-            Destroy(collision.gameObject);//Esse destroi o tiro
+            Destroy(collision.gameObject); // Destrói a bala
             if (Life <= 0)
             {
-
-                Destroy(gameObject);//Esse destroi o inimigo
+                Destroy(gameObject); // Destrói o Boss
             }
-
         }
+    }
+
+    private void ReverseDirection()
+    {
+        // Inverte a direção do movimento
+        direction *= -1;
+        body.velocity = new Vector2(speed * direction, body.velocity.y);
     }
 }
