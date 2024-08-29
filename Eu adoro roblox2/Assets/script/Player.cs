@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-
     public UnityEvent OnPlayerKillEnemy;
     public UnityEvent OnPause;
     public UnityEvent OnUnPause;
@@ -16,63 +15,49 @@ public class Player : MonoBehaviour
     public float Life = 3f;
     public float lifeMax;
     public GameObject bullet;
-    public Transform foot;
-    bool groundCheck;
-    public float speed = 5, jumpStrength = 5, bulletSpeed = 8;
-    float horizontal;
-    public Rigidbody2D body;
+    public Transform groundCheck;
+    public LayerMask groundLayer;
+    public float groundCheckRadius = 0.2f;
+    public float speed = 5f;
+    public float jumpStrength = 5f;
+    public float bulletSpeed = 8f;
     public GameObject restartText;
     public GameObject imagem;
-    Collider2D footCollision;
-    int direction = 1;
-    // Start is called before the first frame update
+
+    private Rigidbody2D body;
+    private float horizontal;
+    private bool isGrounded;
+    private int direction = 1;
+
     void Start()
     {
         lifeMax = Life;
-        restartText.SetActive(false);
+        body = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        // Handle horizontal movement
         horizontal = Input.GetAxisRaw("Horizontal");
         body.velocity = new Vector2(horizontal * speed, body.velocity.y);
 
-        //groundCheck = Physics2D.OverlapCircle(foot.position, 0.05f);
-        footCollision = Physics2D.OverlapCircle(foot.position, 0.05f);
-        groundCheck = footCollision;
-        if (footCollision != null)
-        {
-            if (footCollision.CompareTag("Enemy"))
-            {
+        // Check if the player is grounded
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-                body.AddForce(new Vector2(0, jumpStrength * 150));
-                Destroy(footCollision.gameObject);
-            }
+        // Handle jumping
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            body.velocity = new Vector2(body.velocity.x, jumpStrength);
         }
 
-        if (Input.GetButtonDown("Jump") && groundCheck)
-        {
-            body.AddForce(new Vector2(0, jumpStrength * 100));
-        }
-        if (horizontal != 0)//Para GetAxisRaw
-        {
-            direction = (int)horizontal;
-        }
-        /*Para quem está usando GetAxis
-        if(horizontal < 0)
-        {
-            direction = -1;
-        } else if(horizontal > 0)
-        {
-            direction = 1;
-        }
-        */
+        // Handle shooting
         if (Input.GetButtonDown("Fire1"))
         {
             GameObject temp = Instantiate(bullet, transform.position, transform.rotation);
             temp.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed * direction, 0);
         }
+
+        // Handle pausing and unpausing
         if (Input.GetButtonDown("Cancel"))
         {
             if (Time.timeScale == 0)
@@ -85,39 +70,43 @@ public class Player : MonoBehaviour
                 Time.timeScale = 0;
                 OnPause.Invoke();
             }
-
         }
 
+        // Update direction
+        if (horizontal != 0)
+        {
+            direction = (int)horizontal;
+        }
     }
-    
+
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Boss"))
+        if (collision.gameObject.CompareTag("Boss"))
         {
             Life -= collision.gameObject.GetComponent<BossLegal>().damage;
             if (Life <= 0)
             {
-                gameObject.SetActive(true);
+                gameObject.SetActive(false);
                 Time.timeScale = 0f;
                 GameOver();
             }
         }
-       
     }
+
     void GameOver()
     {
         restartText.SetActive(true);
     }
+
     public void Recomecar()
     {
         SceneManager.LoadScene("boss battle");
         Time.timeScale = 1F;
     }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
-
+        // Handle any necessary logic when the player exits a collision
     }
-    
-    
 }
 

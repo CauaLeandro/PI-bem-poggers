@@ -7,7 +7,7 @@ public class Portal : MonoBehaviour
     public int cenaAtual;
     void Start()
     {
-        cenaAtual = SceneManager.GetActiveScene().buildIndex;
+        
     }
 
     void Update()
@@ -18,7 +18,7 @@ public class Portal : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene(cenaAtual + 1);
+            SceneManager.LoadScene("LAbirinto");
         }
     }
 }
