@@ -13,9 +13,9 @@ public class MazeShotter : MonoBehaviour
     private Vector2 MoveDirection;
     public Rigidbody2D rb;
 
-    public MazeWeapon weapon;
-
    
+
+    public MazeWeapon mazeWeapon;
 
 
 
@@ -40,7 +40,8 @@ public class MazeShotter : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            //MazeWeapon.Fire();
+            mazeWeapon.Fire();
+
 
 
         }
