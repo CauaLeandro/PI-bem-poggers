@@ -22,6 +22,17 @@ public class Bullet : MonoBehaviour
     {
         Destroy(gameObject, 1.0f);
     }
-  
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        switch(other.gameObject.tag)
+        {
+            case "Wall":
+            Destroy(gameObject);
+            break;
+            case "Enemy":
+
+            break;
+        }
+    }
 
 }
