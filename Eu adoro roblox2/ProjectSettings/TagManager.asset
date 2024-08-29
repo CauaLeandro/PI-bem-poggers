@@ -12,6 +12,9 @@ TagManager:
   - Boss
   - Wall
   - Colisor
+  - Goku
+  - Vegeta
+  - Freeza
   layers:
   - Default
   - TransparentFX

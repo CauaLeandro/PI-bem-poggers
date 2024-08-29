@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Portal : MonoBehaviour
 {
-    public int cenaAtual;
+    
     void Start()
     {
         
@@ -16,9 +16,18 @@ public class Portal : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Vegeta"))
         {
             SceneManager.LoadScene("LAbirinto");
         }
+        if (collision.CompareTag("Goku"))
+        {
+            SceneManager.LoadScene("boss battle");
+        }
+        if (collision.CompareTag("Freeza"))
+        {
+            SceneManager.LoadScene("boss battle");
+        }
+
     }
 }

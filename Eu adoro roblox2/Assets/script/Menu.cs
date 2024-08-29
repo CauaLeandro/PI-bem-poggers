@@ -29,7 +29,7 @@ public class Menu : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene(NomeFase);
+        SceneManager.LoadScene("Inicio");
     }
     public void AbrirOpçao()
     {
@@ -48,5 +48,12 @@ public class Menu : MonoBehaviour
 
         Application.Quit();
     }
-
+    public void Creditos()
+    {
+        SceneManager.LoadScene("Creditos");
+    }
+    public void Voltar()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
