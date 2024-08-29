@@ -30,9 +30,10 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
             break;
             case "Enemy":
-
+                Destroy(gameObject);
             break;
         }
+
     }
 
 }
