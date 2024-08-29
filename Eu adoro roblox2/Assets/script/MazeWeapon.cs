@@ -8,9 +8,12 @@ public class MazeWeapon : MonoBehaviour
 
     public Transform firePoint;
 
+    public float fireForce;
+
     public void Fire()
     {
-        Instantiate(bullet, firePoint.position, firePoint.rotation);
+       GameObject projectile = Instantiate(bullet, firePoint.position, firePoint.rotation);
+
     }
 
 }
