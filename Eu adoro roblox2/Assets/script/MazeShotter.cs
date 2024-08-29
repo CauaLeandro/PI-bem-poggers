@@ -15,7 +15,7 @@ public class MazeShotter : MonoBehaviour
 
     public MazeWeapon weapon;
 
-    
+   
 
 
 
@@ -42,10 +42,16 @@ public class MazeShotter : MonoBehaviour
         {
             //MazeWeapon.Fire();
 
+
         }
+
         MoveDirection = new Vector2(moveX, moveY);
         mousePosition = sceneCamera.ScreenToWorldPoint(Input.mousePosition);
     }
+   
+
+
+
 
     private void Move()
     {

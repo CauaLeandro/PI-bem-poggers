@@ -531,6 +531,7 @@ MonoBehaviour:
   moveSpeed: 5
   rb: {fileID: 1544084592}
   weapon: {fileID: 884367325}
+  MazeWeapon: {fileID: 884367325}
 --- !u!61 &1544084591
 BoxCollider2D:
   m_ObjectHideFlags: 0
