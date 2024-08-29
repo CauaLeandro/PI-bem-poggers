@@ -8,7 +8,7 @@ public class BossLegal : MonoBehaviour
     public float speed;
     int direction = -1;
     int direction2 = 1;
-    private int Life = 20;
+    private int Life = 70;
     Rigidbody2D body;
     // Start is called before the first frame update
     void Start()

@@ -14,7 +14,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Bernardo.unity
     guid: 720f3c20f4e78594aab0e21995464079
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/boss battle.unity
     guid: ef662d8966c9dcc4a86b5c8369be668f
+  - enabled: 1
+    path: Assets/Scenes/Inicio.unity
+    guid: 29f516dddb378054683839fc46031931
+  - enabled: 1
+    path: Assets/Scenes/LAbirinto.unity
+    guid: 8b41bdb0549197240935bd488117d918
   m_configObjects: {}
