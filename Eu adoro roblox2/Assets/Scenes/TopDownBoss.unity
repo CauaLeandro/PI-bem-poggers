@@ -229,8 +229,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 6399352268972023195, guid: 3168b43acb2b7ff46b38b6b7fe76b090, type: 3}
-  fireRate: 1
-  projectileSpeed: 5
+  fireRate: 2
+  projectileSpeed: 6
   damageAmount: 10
 --- !u!58 &386224063
 CircleCollider2D:
