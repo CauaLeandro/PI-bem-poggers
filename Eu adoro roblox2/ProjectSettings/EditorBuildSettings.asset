@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LAbirinto.unity
     guid: 8b41bdb0549197240935bd488117d918
+  - enabled: 1
+    path: Assets/Scenes/Bounciness Boss Batle.unity
+    guid: cf582bd42c24bff4fbfb668560fdda9b
   m_configObjects: {}

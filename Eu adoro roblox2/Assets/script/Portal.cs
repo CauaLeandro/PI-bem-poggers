@@ -26,7 +26,7 @@ public class Portal : MonoBehaviour
         }
         if (collision.CompareTag("Freeza"))
         {
-            SceneManager.LoadScene("boss battle");
+            SceneManager.LoadScene("Creditos");
         }
 
     }
