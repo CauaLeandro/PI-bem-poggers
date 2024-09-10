@@ -17,4 +17,5 @@ public class MazeShotterBullet2 : MonoBehaviour
             Destroy(gameObject);  // Destrói o projétil após a colisão
         }
     }
+    
 }
