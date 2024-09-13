@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &50354850 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8894219307483700820, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+  m_PrefabInstance: {fileID: 817629554}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &52507342
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,6 +340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 576120471}
   - component: {fileID: 576120472}
+  - component: {fileID: 576120473}
   m_Layer: 0
   m_Name: Ground texture Boss Batle quicante (6)
   m_TagString: Untagged
@@ -409,6 +415,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &576120473
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576120470}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.79, y: 1.28}
+    newSize: {x: 1.79, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.79, y: 1.28}
+  m_EdgeRadius: 0
 --- !u!1 &672830638
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,6 +451,7 @@ GameObject:
   m_Component:
   - component: {fileID: 672830639}
   - component: {fileID: 672830640}
+  - component: {fileID: 672830641}
   m_Layer: 0
   m_Name: Ground texture Boss Batle quicante (3)
   m_TagString: Untagged
@@ -493,6 +526,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &672830641
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672830638}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.79, y: 1.28}
+    newSize: {x: 1.79, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.79, y: 1.28}
+  m_EdgeRadius: 0
 --- !u!1 &800560350
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,17 +670,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: oswaldo unity
       objectReference: {fileID: 0}
+    - target: {fileID: 8894219307788529101, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+      propertyPath: groundCheck
+      value: 
+      objectReference: {fileID: 50354850}
     - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.62
+      value: -8.66
       objectReference: {fileID: 0}
     - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.59
+      value: -1.15
       objectReference: {fileID: 0}
     - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -667,6 +730,7 @@ GameObject:
   m_Component:
   - component: {fileID: 827626759}
   - component: {fileID: 827626760}
+  - component: {fileID: 827626761}
   m_Layer: 0
   m_Name: Ground texture Boss Batle quicante (7)
   m_TagString: Untagged
@@ -741,6 +805,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &827626761
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827626758}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.79, y: 1.28}
+    newSize: {x: 1.79, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.79, y: 1.28}
+  m_EdgeRadius: 0
 --- !u!1 &828693246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,6 +1093,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1030998692}
   - component: {fileID: 1030998693}
+  - component: {fileID: 1030998694}
   m_Layer: 0
   m_Name: Ground texture Boss Batle quicante (4)
   m_TagString: Untagged
@@ -1077,6 +1168,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1030998694
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030998691}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.79, y: 1.28}
+    newSize: {x: 1.79, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.79, y: 1.28}
+  m_EdgeRadius: 0
 --- !u!1 &1038988653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1087,6 +1204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1038988654}
   - component: {fileID: 1038988655}
+  - component: {fileID: 1038988656}
   m_Layer: 0
   m_Name: Ground texture Boss Batle quicante (2)
   m_TagString: Untagged
@@ -1161,6 +1279,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1038988656
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038988653}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.79, y: 1.28}
+    newSize: {x: 1.79, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.79, y: 1.28}
+  m_EdgeRadius: 0
 --- !u!1 &1202646775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1347,6 +1491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1514175465}
   - component: {fileID: 1514175466}
+  - component: {fileID: 1514175467}
   m_Layer: 0
   m_Name: Ground texture Boss Batle quicante (5)
   m_TagString: Untagged
@@ -1421,6 +1566,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1514175467
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514175464}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.79, y: 1.28}
+    newSize: {x: 1.79, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.79, y: 1.28}
+  m_EdgeRadius: 0
 --- !u!1 &1680545283
 GameObject:
   m_ObjectHideFlags: 0
@@ -1431,6 +1602,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1680545284}
   - component: {fileID: 1680545285}
+  - component: {fileID: 1680545286}
   m_Layer: 0
   m_Name: Ground texture Boss Batle quicante (1)
   m_TagString: Untagged
@@ -1505,6 +1677,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1680545286
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680545283}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.79, y: 1.28}
+    newSize: {x: 1.79, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.79, y: 1.28}
+  m_EdgeRadius: 0
 --- !u!1 &1739930797
 GameObject:
   m_ObjectHideFlags: 0
@@ -1683,6 +1881,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2070120174}
   - component: {fileID: 2070120175}
+  - component: {fileID: 2070120176}
   m_Layer: 0
   m_Name: Ground texture Boss Batle quicante (8)
   m_TagString: Untagged
@@ -1757,6 +1956,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2070120176
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070120173}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.79, y: 1.28}
+    newSize: {x: 1.79, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.79, y: 1.28}
+  m_EdgeRadius: 0
 --- !u!1 &2131816387
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,6 +1992,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2131816388}
   - component: {fileID: 2131816389}
+  - component: {fileID: 2131816390}
   m_Layer: 0
   m_Name: Ground texture Boss Batle quicante (9)
   m_TagString: Untagged
@@ -1841,6 +2067,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2131816390
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131816387}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.79, y: 1.28}
+    newSize: {x: 1.79, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.79, y: 1.28}
+  m_EdgeRadius: 0
 --- !u!1 &2132718213
 GameObject:
   m_ObjectHideFlags: 0
