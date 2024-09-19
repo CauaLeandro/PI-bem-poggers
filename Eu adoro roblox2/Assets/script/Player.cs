@@ -83,19 +83,19 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Boss"))
         {
-            Life -= collision.gameObject.GetComponent<BossLegal>().damage;
-            if (Life <= 0)
+            if(Life > 0)
             {
-                gameObject.SetActive(false);
-                Time.timeScale = 0f;
-                GameOver();
+                Life -= collision.gameObject.GetComponent<BossLegal>().damage;
+            }
+            else if (Life <= 0)
+            {
+            
             }
         }
     }
 
     void GameOver()
     {
-        restartText.SetActive(true);
     }
 
     public void Recomecar()
