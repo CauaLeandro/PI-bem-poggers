@@ -7,6 +7,7 @@ public class RabiesBoss : MonoBehaviour
     public float speed = 5f; // Velocidade de movimento do boss
     public float bounceForce = 10f; // Força do quique
     public float damage = 1f; // Dano causado ao jogador
+    public float life = 10f; // Vida do boss
     public Transform groundCheck; // Ponto para verificar se está no chão
     public LayerMask groundLayer; // Layer do chão
     public float groundCheckRadius = 0.2f; // Raio para verificar se está no chão
@@ -50,6 +51,32 @@ public class RabiesBoss : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<Player>().Life -= damage;
+    
+        }
+
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            Destroy(collision);
         }
     }
+    public void TakeDamage(float amount)
+    {
+        life -= amount;
+        if (life <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        // Aqui você pode adicionar lógica para quando o boss morrer (ex: tocar animação, dar pontos, destruir o objeto)
+        Destroy(gameObject);
+    }
 }
+

@@ -18,6 +18,7 @@ public class Restart : MonoBehaviour
         if(player.Life <= 0)
         {
             restartCanva.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
     public void restart()

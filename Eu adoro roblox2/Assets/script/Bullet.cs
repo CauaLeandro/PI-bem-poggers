@@ -7,9 +7,15 @@ public class Bullet : MonoBehaviour
     public Rigidbody2D rb;
     public int damage = 1;
     public float projectileForce = 500f;
+    public RabiesBoss script;
     // Start is called before the first frame update
     void Start()
     {
+       
+        
+            rb = GetComponent<Rigidbody2D>();
+            rb.AddForce(transform.up * projectileForce); // Aplique a força
+        
 
     }
 
@@ -24,16 +30,15 @@ public class Bullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        switch(other.gameObject.tag)
+        
+        
+        if (other.gameObject.CompareTag("Boss"))
         {
-            case "Wall":
+            script.TakeDamage(damage);
             Destroy(gameObject);
-            break;
-            case "Enemy":
-                Destroy(gameObject);
-            break;
         }
-
+    
     }
+    
 
 }

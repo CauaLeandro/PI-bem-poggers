@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     public float bulletSpeed = 8f;
     public GameObject restartText;
     public GameObject imagem;
-
+    
     private Rigidbody2D body;
     private float horizontal;
     private bool isGrounded;
