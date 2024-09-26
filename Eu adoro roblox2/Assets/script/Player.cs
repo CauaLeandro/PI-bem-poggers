@@ -101,7 +101,7 @@ public class Player : MonoBehaviour
     public void Recomecar()
     {
         SceneManager.LoadScene("boss battle");
-        Time.timeScale = 1F;
+        Time.timeScale = 1;
     }
 
     private void OnCollisionExit2D(Collision2D collision)

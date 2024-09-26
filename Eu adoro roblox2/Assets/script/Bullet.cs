@@ -14,7 +14,7 @@ public class Bullet : MonoBehaviour
        
         
             rb = GetComponent<Rigidbody2D>();
-            rb.AddForce(transform.up * projectileForce); // Aplique a força
+            rb.AddForce(transform.right * projectileForce); // Aplique a força
         
 
     }

@@ -10,7 +10,7 @@ public class Restart : MonoBehaviour
     public void Start()
     {
         player = GetComponent<Player>();
-        restartCanva.SetActive(false);
+        
         Time.timeScale = 1f;
     }
     private void Update()
@@ -19,6 +19,7 @@ public class Restart : MonoBehaviour
         {
             restartCanva.SetActive(true);
             Time.timeScale = 0f;
+            
         }
     }
     public void restart()
