@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
@@ -21,9 +20,9 @@ public class Player : MonoBehaviour
     public float speed = 5f;
     public float jumpStrength = 5f;
     public float bulletSpeed = 8f;
-    public GameObject restartText;
-    public GameObject imagem;
-    
+    public GameObject restartText; // Not used in this code
+    public GameObject imagem; // Not used in this code
+
     private Rigidbody2D body;
     private float horizontal;
     private bool isGrounded;
@@ -37,27 +36,45 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        // Handle horizontal movement
+        HandleMovement();
+        HandleJumping();
+        HandleShooting();
+        HandlePause();
+        UpdateDirection();
+    }
+
+    private void HandleMovement()
+    {
         horizontal = Input.GetAxisRaw("Horizontal");
         body.velocity = new Vector2(horizontal * speed, body.velocity.y);
+    }
 
-        // Check if the player is grounded
+    private void HandleJumping()
+    {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-        // Handle jumping
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             body.velocity = new Vector2(body.velocity.x, jumpStrength);
         }
+    }
 
-        // Handle shooting
+    private void HandleShooting()
+    {
         if (Input.GetButtonDown("Fire1"))
         {
-            GameObject temp = Instantiate(bullet, transform.position, transform.rotation);
-            temp.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed * direction, 0);
+            Shoot();
         }
+    }
 
-        // Handle pausing and unpausing
+    private void Shoot()
+    {
+        GameObject temp = Instantiate(bullet, transform.position, transform.rotation);
+        temp.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed * direction, 0);
+    }
+
+    private void HandlePause()
+    {
         if (Input.GetButtonDown("Cancel"))
         {
             if (Time.timeScale == 0)
@@ -65,17 +82,19 @@ public class Player : MonoBehaviour
                 Time.timeScale = 1;
                 OnUnPause.Invoke();
             }
-            else if (Time.timeScale == 1)
+            else
             {
                 Time.timeScale = 0;
                 OnPause.Invoke();
             }
         }
+    }
 
-        // Update direction
+    private void UpdateDirection()
+    {
         if (horizontal != 0)
         {
-            direction = (int)horizontal;
+            direction = (int)Mathf.Sign(horizontal); // Use Mathf.Sign to determine direction
         }
     }
 
@@ -83,30 +102,27 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Boss"))
         {
-            if(Life > 0)
-            {
-                Life -= collision.gameObject.GetComponent<BossLegal>().damage;
-            }
-            else if (Life <= 0)
-            {
-            
-            }
+            TakeDamage(collision.gameObject.GetComponent<BossLegal>().damage);
+        }
+    }
+
+    private void TakeDamage(float damage)
+    {
+        Life -= damage;
+        if (Life <= 0)
+        {
+            GameOver();
         }
     }
 
     void GameOver()
     {
+        // Implement game over logic here (e.g., show restart options)
     }
 
-    public void Recomecar()
+    public void Restart()
     {
         SceneManager.LoadScene("boss battle");
         Time.timeScale = 1;
     }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        // Handle any necessary logic when the player exits a collision
-    }
 }
-
