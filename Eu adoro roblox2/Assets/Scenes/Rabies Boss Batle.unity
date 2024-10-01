@@ -217,7 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 39537879}
   - component: {fileID: 39537881}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -375,11 +375,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &50354850 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8894219307483700820, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-  m_PrefabInstance: {fileID: 817629554}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &52507342
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,7 +603,7 @@ GameObject:
   m_Component:
   - component: {fileID: 100123893}
   - component: {fileID: 100123895}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (10)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -692,7 +687,7 @@ GameObject:
   m_Component:
   - component: {fileID: 102654406}
   - component: {fileID: 102654408}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (11)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -854,11 +849,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 112291353}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 2.0938785, z: -24.5}
+  m_LocalPosition: {x: 0.31877643, y: 4.187757, z: -31.600979}
   m_LocalScale: {x: 1.820764, y: 1.820764, z: 1.820764}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1501299497}
+  m_Father: {fileID: 1403565179}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &112291357
@@ -988,7 +983,7 @@ GameObject:
   m_Component:
   - component: {fileID: 227306431}
   - component: {fileID: 227306433}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (4)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1314,6 +1309,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &496173546 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8894219307788529090, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+  m_PrefabInstance: {fileID: 1331159856}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &543935611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1400,7 +1400,7 @@ Transform:
   m_Children:
   - {fileID: 832418948}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &543935614
 BoxCollider2D:
@@ -1464,7 +1464,7 @@ MonoBehaviour:
   speed: 5
   bounceForce: 10
   damage: 1
-  life: 10
+  life: 50
   groundCheck: {fileID: 832418948}
   groundLayer:
     serializedVersion: 2
@@ -1565,7 +1565,7 @@ RectTransform:
   - {fileID: 1780893947}
   - {fileID: 1586490571}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1582,7 +1582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 576120471}
   - component: {fileID: 576120472}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (6)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1801,7 +1801,7 @@ GameObject:
   m_Component:
   - component: {fileID: 617018179}
   - component: {fileID: 617018181}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (7)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2020,7 +2020,7 @@ GameObject:
   m_Component:
   - component: {fileID: 658459959}
   - component: {fileID: 658459961}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (6)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2104,7 +2104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 672830639}
   - component: {fileID: 672830640}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2357,7 +2357,7 @@ GameObject:
   - component: {fileID: 800560353}
   - component: {fileID: 800560352}
   - component: {fileID: 800560354}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2479,7 +2479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 810825235}
   - component: {fileID: 810825237}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (9)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2553,99 +2553,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &817629554
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8402058494213168765, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-      propertyPath: restartCanva
-      value: 
-      objectReference: {fileID: 566820911}
-    - target: {fileID: 8894219307788529090, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-      propertyPath: m_Name
-      value: oswaldo unity
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894219307788529101, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-      propertyPath: Life
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894219307788529101, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-      propertyPath: imagem
-      value: 
-      objectReference: {fileID: 1586490567}
-    - target: {fileID: 8894219307788529101, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-      propertyPath: lifeMax
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894219307788529101, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-      propertyPath: groundCheck
-      value: 
-      objectReference: {fileID: 50354850}
-    - target: {fileID: 8894219307788529101, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-      propertyPath: restartText
-      value: 
-      objectReference: {fileID: 1173047836}
-    - target: {fileID: 8894219307788529101, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-      propertyPath: jumpStrength
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894219307788529101, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-      propertyPath: groundCheckRadius
-      value: 2000
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894219307788529101, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-      propertyPath: groundLayer.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
 --- !u!1 &827626758
 GameObject:
   m_ObjectHideFlags: 0
@@ -2656,7 +2563,7 @@ GameObject:
   m_Component:
   - component: {fileID: 827626759}
   - component: {fileID: 827626760}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (7)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -3097,6 +3004,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &847280582 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8894219307483700820, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+  m_PrefabInstance: {fileID: 1331159856}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &879120293
 GameObject:
   m_ObjectHideFlags: 0
@@ -3107,7 +3019,7 @@ GameObject:
   m_Component:
   - component: {fileID: 879120294}
   - component: {fileID: 879120296}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -3191,7 +3103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 910826342}
   - component: {fileID: 910826344}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (5)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -3409,7 +3321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 982935523}
   - component: {fileID: 982935525}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -3587,7 +3499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1018635795}
   - component: {fileID: 1018635797}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (10)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -3671,7 +3583,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1030998692}
   - component: {fileID: 1030998693}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (4)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -3755,7 +3667,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1038988654}
   - component: {fileID: 1038988655}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -4098,13 +4010,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1057933428}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.56205, y: 5.21, z: -67.15199}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1093395796
 GameObject:
@@ -4135,7 +4047,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1780893947}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4236,7 +4148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1164531256}
   - component: {fileID: 1164531258}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (7)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -4310,7 +4222,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1173047836
+--- !u!1 &1184529281
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4318,24 +4230,58 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1173047839}
-  - component: {fileID: 1173047838}
-  - component: {fileID: 1173047837}
-  - component: {fileID: 1173047840}
+  - component: {fileID: 1184529282}
+  - component: {fileID: 1184529285}
+  - component: {fileID: 1184529284}
+  - component: {fileID: 1184529283}
   m_Layer: 5
-  m_Name: RestartText
+  m_Name: RestartText (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1173047837
+--- !u!224 &1184529282
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184529281}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1780893947}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -81, y: 107}
+  m_SizeDelta: {x: 261.33, y: 77.26}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1184529283
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1173047836}
+  m_GameObject: {fileID: 1184529281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2322cd2e68625c47a7d0a08838fa61d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  restartCanva: {fileID: 1184529281}
+--- !u!114 &1184529284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184529281}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -4376,8 +4322,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 140
-  m_fontSizeBase: 140
+  m_fontSize: 160
+  m_fontSizeBase: 160
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4412,54 +4358,20 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -127.504135, w: -0.65094185}
+  m_margin: {x: 0, y: 0, z: -191.01872, w: -0.65094185}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1173047838
+--- !u!222 &1184529285
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1173047836}
+  m_GameObject: {fileID: 1184529281}
   m_CullTransparentMesh: 1
---- !u!224 &1173047839
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1173047836}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1780893947}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -48, y: 107}
-  m_SizeDelta: {x: 261.33, y: 77.26}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1173047840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1173047836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2322cd2e68625c47a7d0a08838fa61d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1501299503}
-  restartCanva: {fileID: 1173047836}
 --- !u!1 &1202646775
 GameObject:
   m_ObjectHideFlags: 0
@@ -4564,7 +4476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1260981625}
   - component: {fileID: 1260981627}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (5)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -4722,7 +4634,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1501299502}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Restart, Assembly-CSharp
         m_MethodName: restart
         m_Mode: 1
@@ -4856,6 +4768,91 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1331159856
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8402058494213168765, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1403565174}
+    - target: {fileID: 8402058494213168765, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+      propertyPath: restartCanva
+      value: 
+      objectReference: {fileID: 1780893946}
+    - target: {fileID: 8894219307788529090, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+      propertyPath: m_Name
+      value: oswaldo unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894219307788529101, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+      propertyPath: imagem
+      value: 
+      objectReference: {fileID: 1780893946}
+    - target: {fileID: 8894219307788529101, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+      propertyPath: groundCheck
+      value: 
+      objectReference: {fileID: 847280582}
+    - target: {fileID: 8894219307788529101, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+      propertyPath: restartText
+      value: 
+      objectReference: {fileID: 1300839365}
+    - target: {fileID: 8894219307788529101, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+      propertyPath: jumpStrength
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894219307788529101, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
 --- !u!1 &1361293546
 GameObject:
   m_ObjectHideFlags: 0
@@ -4866,7 +4863,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1361293547}
   - component: {fileID: 1361293549}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (8)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -4950,7 +4947,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1385298816}
   - component: {fileID: 1385298818}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -5108,6 +5105,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1403565174 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8894219307788529101, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+  m_PrefabInstance: {fileID: 1331159856}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496173546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73153bc44a2950d47a0b05759c6f63b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1403565179 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
+  m_PrefabInstance: {fileID: 1331159856}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1403565184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496173546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9141dc576800d5449ae5306f12bce50d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 1586490567}
 --- !u!1 &1438803007
 GameObject:
   m_ObjectHideFlags: 0
@@ -5118,7 +5144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1438803008}
   - component: {fileID: 1438803010}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (8)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -5202,7 +5228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1462519381}
   - component: {fileID: 1462519383}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (9)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -5360,33 +5386,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1501299497 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8894219307788529102, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-  m_PrefabInstance: {fileID: 817629554}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1501299502 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8402058494213168765, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-  m_PrefabInstance: {fileID: 817629554}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2322cd2e68625c47a7d0a08838fa61d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1501299503 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8894219307788529101, guid: 7a235033f0181e84787f1d6e6d1dc93e, type: 3}
-  m_PrefabInstance: {fileID: 817629554}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73153bc44a2950d47a0b05759c6f63b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1514175464
 GameObject:
   m_ObjectHideFlags: 0
@@ -5397,7 +5396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1514175465}
   - component: {fileID: 1514175466}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (5)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -5481,7 +5480,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1585160237}
   - component: {fileID: 1585160239}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (10)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -5788,13 +5787,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635206180}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.95, y: 0.618, z: -4.94}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 21.950003, y: 0.618, z: -4.9400024}
   m_LocalScale: {x: 1, y: 12.039771, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1680545283
 GameObject:
@@ -5806,7 +5805,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1680545284}
   - component: {fileID: 1680545285}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -5974,7 +5973,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1747007205}
   - component: {fileID: 1747007207}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -6058,7 +6057,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1768814916}
   - component: {fileID: 1768814918}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -6163,8 +6162,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1300839366}
-  - {fileID: 1173047839}
   - {fileID: 1093395798}
+  - {fileID: 1184529282}
   m_Father: {fileID: 566820915}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6305,7 +6304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1809888302}
   - component: {fileID: 1809888304}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -6435,7 +6434,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1877577734
 GameObject:
@@ -6708,7 +6707,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2049071527}
   - component: {fileID: 2049071529}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (4)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -6792,7 +6791,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2070120174}
   - component: {fileID: 2070120175}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (8)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -6876,7 +6875,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2114120203}
   - component: {fileID: 2114120205}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (6)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -6960,7 +6959,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2131816388}
   - component: {fileID: 2131816389}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground texture Boss Batle quicante (9)
   m_TagString: Ground
   m_Icon: {fileID: 0}

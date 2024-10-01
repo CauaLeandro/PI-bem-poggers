@@ -11,7 +11,7 @@ public class MenuPause : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             menu.SetActive(true);
-            Time.timeScale = 0f;
+            Time.timeScale = 0.0f;
         }
     }
     public void SairPause()
