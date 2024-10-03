@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -27,15 +28,19 @@ public class Player : MonoBehaviour
     private float horizontal;
     private bool isGrounded;
     private int direction = 1;
+    private SpriteRenderer spriteRenderer;
+
 
     void Start()
     {
         lifeMax = Life;
         body = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
+       
         HandleMovement();
         HandleJumping();
         HandleShooting();
@@ -47,7 +52,14 @@ public class Player : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         body.velocity = new Vector2(horizontal * speed, body.velocity.y);
+        
+       
+        
+
+       
+        
     }
+    
 
     private void HandleJumping()
     {
@@ -63,6 +75,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
+            
             Shoot();
         }
     }

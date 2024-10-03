@@ -15,6 +15,9 @@ public class Bullet : MonoBehaviour
         script= FindObjectOfType<RabiesBoss>();
             rb = GetComponent<Rigidbody2D>();
             rb.AddForce(transform.right * projectileForce); // Aplique a força
+
+     
+      
         
 
     }
