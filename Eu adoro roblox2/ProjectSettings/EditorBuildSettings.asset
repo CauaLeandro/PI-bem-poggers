@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rabies Boss Batle.unity
     guid: cf582bd42c24bff4fbfb668560fdda9b
+  - enabled: 1
+    path: Assets/Scenes/TopDownBoss.unity
+    guid: ec62282c978c1e542ae599808aef6ef5
   m_configObjects: {}
