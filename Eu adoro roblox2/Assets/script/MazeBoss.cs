@@ -7,7 +7,7 @@ public class MazeBoss : MonoBehaviour
     public GameObject projectilePrefab;  // Prefab do projétil
     public float fireRate = 1f;           // Tempo entre disparos
     public float projectileSpeed = 5f;    // Velocidade do projétil
-    public float damageAmount = 10f; // Quantidade de dano que o boss causa
+    public float damageAmount = 10f;      // Quantidade de dano que o boss causa
 
     private void Start()
     {
@@ -43,8 +43,16 @@ public class MazeBoss : MonoBehaviour
             GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
             Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
             rb.velocity = direction * projectileSpeed;
+
+            // Adiciona o script de Bullet ao projétil, se não estiver presente
+            Bullet bulletScript = projectile.GetComponent<Bullet>();
+            if (bulletScript == null)
+            {
+                bulletScript = projectile.AddComponent<Bullet>();
+            }
         }
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))

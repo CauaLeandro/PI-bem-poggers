@@ -11,18 +11,23 @@ public class Player : MonoBehaviour
     public UnityEvent OnPlayerKillEnemy;
     public UnityEvent OnPause;
     public UnityEvent OnUnPause;
+
     public int score;
     public float Life = 3f;
     public float lifeMax;
+
     public GameObject bullet;
+
     public Transform groundCheck;
     public LayerMask groundLayer;
+
     public float groundCheckRadius = 0.2f;
     public float speed = 5f;
     public float jumpStrength = 5f;
     public float bulletSpeed = 8f;
-    public GameObject restartText; // Not used in this code
-    public GameObject imagem; // Not used in this code
+
+    public GameObject restartText; 
+    public GameObject imagem; 
 
     private Rigidbody2D body;
     private float horizontal;
@@ -30,7 +35,11 @@ public class Player : MonoBehaviour
     private int direction = 1;
     private SpriteRenderer spriteRenderer;
 
+    // esses dois a baixo são para o cooldown do bullet do player :) (por bernardo)
+    public float shootCooldown = 1f; 
+    private float lastShootTime = 0f;
 
+    public Transform shootingPoint;
     void Start()
     {
         lifeMax = Life;
@@ -48,6 +57,16 @@ public class Player : MonoBehaviour
         UpdateDirection();
     }
 
+    private void UpdateDirection()
+    {
+        if (horizontal != 0)
+        {
+            direction = (int)Mathf.Sign(horizontal);
+
+            // Ajusta a escala do player para virar o sprite
+            transform.localScale = new Vector3(direction, transform.localScale.y, transform.localScale.z);
+        }
+    }
     private void HandleMovement()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -73,19 +92,27 @@ public class Player : MonoBehaviour
 
     private void HandleShooting()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && Time.time >= lastShootTime + shootCooldown)
         {
-            
             Shoot();
+            lastShootTime = Time.time; // Atualiza o tempo do último tiro
         }
     }
 
     private void Shoot()
     {
-        GameObject temp = Instantiate(bullet, transform.position, transform.rotation);
-        temp.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed * direction, 0);
-    }
 
+        GameObject temp = Instantiate(bullet, shootingPoint.position, Quaternion.identity); // Usa a posição do shootingPoint
+        Rigidbody2D bulletRb = temp.GetComponent<Rigidbody2D>();
+
+        bulletRb.velocity = new Vector2(bulletSpeed * direction, 0);
+        bulletRb.gravityScale = 0;
+
+        if (direction == -1)
+        {
+            temp.transform.localScale = new Vector3(-Mathf.Abs(temp.transform.localScale.x), temp.transform.localScale.y, temp.transform.localScale.z);
+        }
+    }
     private void HandlePause()
     {
         if (Input.GetButtonDown("Cancel"))
@@ -100,14 +127,6 @@ public class Player : MonoBehaviour
                 Time.timeScale = 0;
                 OnPause.Invoke();
             }
-        }
-    }
-
-    private void UpdateDirection()
-    {
-        if (horizontal != 0)
-        {
-            direction = (int)Mathf.Sign(horizontal); // Use Mathf.Sign to determine direction
         }
     }
 
@@ -130,7 +149,7 @@ public class Player : MonoBehaviour
 
     void GameOver()
     {
-        // Implement game over logic here (e.g., show restart options)
+       
     }
 
     public void Restart()
