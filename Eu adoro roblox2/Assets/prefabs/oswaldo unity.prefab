@@ -1,36 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8894219307483700821
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8894219307483700820}
-  m_Layer: 0
-  m_Name: foot
-  m_TagString: foot
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8894219307483700820
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8894219307483700821}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.09103855, y: -2.77, z: 0.07670504}
-  m_LocalScale: {x: 1.820764, y: 1.820764, z: 1.820764}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8894219307788529102}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8894219307788529090
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,8 +32,7 @@ Transform:
   m_LocalPosition: {x: -8.89, y: -2.3, z: 0}
   m_LocalScale: {x: 0.54922, y: 0.54922, z: 0.54922}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8894219307483700820}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -135,7 +103,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.086524785, y: 0.04352045}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 2.75, y: 1.375, z: 2.75, w: 1.375}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 8, y: 8}
     newSize: {x: 0.64, y: 0.64}
@@ -179,6 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2322cd2e68625c47a7d0a08838fa61d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   restartCanva: {fileID: 0}
 --- !u!114 &8894219307788529101
 MonoBehaviour:
@@ -239,3 +208,5 @@ MonoBehaviour:
   bulletSpeed: 8
   restartText: {fileID: 0}
   imagem: {fileID: 0}
+  shootCooldown: 1
+  shootingPoint: {fileID: 0}
