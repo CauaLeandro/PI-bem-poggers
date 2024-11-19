@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     public GameObject bullet;
 
     public Transform groundCheck;
-    public LayerMask groundLayer;
+    public LayerMask groundLayer;l
 
     public float groundCheckRadius = 0.2f;
     public float speed = 5f;
