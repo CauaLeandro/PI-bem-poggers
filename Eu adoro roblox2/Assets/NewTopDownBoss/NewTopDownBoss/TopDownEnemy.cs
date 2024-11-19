@@ -56,7 +56,7 @@ public class TopDownEnemy : MonoBehaviour
                 }
                 else
                 {
-                    // Para o movimento quando está dentro da distância de parada
+                    
                     movement = Vector2.zero;
                 }
 

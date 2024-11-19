@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+ 
     public UnityEvent OnPlayerKillEnemy;
     public UnityEvent OnPause;
     public UnityEvent OnUnPause;
@@ -18,20 +19,18 @@ public class Player : MonoBehaviour
 
     public GameObject bullet;
 
-    public Transform groundCheck;
-    public LayerMask groundLayer;l
+    public float jumpForce = 5f;
+    private bool isGrounded = true;
 
-    public float groundCheckRadius = 0.2f;
     public float speed = 5f;
-    public float jumpStrength = 5f;
     public float bulletSpeed = 8f;
 
     public GameObject restartText; 
     public GameObject imagem; 
-
+    
     private Rigidbody2D body;
+   
     private float horizontal;
-    private bool isGrounded;
     private int direction = 1;
     private SpriteRenderer spriteRenderer;
 
@@ -49,7 +48,11 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-       
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            body.velocity = new Vector2(body.velocity.x, jumpForce);
+        }
+
         HandleMovement();
         HandleJumping();
         HandleShooting();
@@ -82,12 +85,6 @@ public class Player : MonoBehaviour
 
     private void HandleJumping()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            body.velocity = new Vector2(body.velocity.x, jumpStrength);
-        }
     }
 
     private void HandleShooting()
@@ -138,7 +135,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         Life -= damage;
         if (Life <= 0)
@@ -147,10 +144,24 @@ public class Player : MonoBehaviour
         }
     }
 
-    void GameOver()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-       
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
     }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = false;
+        }
+    }
+        void GameOver()
+        {
+       
+        }
 
     public void Restart()
     {
