@@ -56,4 +56,8 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+    public void Oi()
+    {
+        SceneManager.LoadScene("Controles");
+    }
 }
