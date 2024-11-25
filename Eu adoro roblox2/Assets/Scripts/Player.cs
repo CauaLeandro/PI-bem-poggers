@@ -65,9 +65,23 @@ public class Player : MonoBehaviour
         if (horizontal != 0)
         {
             direction = (int)Mathf.Sign(horizontal);
+            if(direction < 0)
+            {
+                if(transform.localScale.x > 0)
+                {
+                    transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+                }
+
+            } else if(direction > 0)
+            {
+                if (transform.localScale.x < 0)
+                {
+                    transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+                }
+            }
 
             // Ajusta a escala do player para virar o sprite
-            transform.localScale = new Vector3(direction, transform.localScale.y, transform.localScale.z);
+            
         }
     }
     private void HandleMovement()
