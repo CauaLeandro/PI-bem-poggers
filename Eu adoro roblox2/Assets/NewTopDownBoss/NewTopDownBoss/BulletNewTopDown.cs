@@ -12,19 +12,25 @@ public class BulletNewTopDown : MonoBehaviour
         Destroy(gameObject, lifeTime);// a bullet desaparece depois de um tempo
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        Destroy(gameObject);//destroi a bullet depois de bater em algo
-        
-       
-       if (collision.gameObject.CompareTag("Enemy"))
-       {
-         
-         collision.gameObject.GetComponent<TopDownEnemy>().TakeDamage(50); // dano ao atingir o enemy
-         Destroy(gameObject); // Destroi a bullet depois de atingir o enemy
-       }
-        
-    }
+        if (collision.CompareTag("Boss"))
+        {
+            Debug.Log("Colidiu com o boss!");
+            collision.GetComponent<TopDownTrueBoss>().TakeDamage(50);
+            Destroy(gameObject);
+           
+        }
+        else if (collision.CompareTag("Wall"))
+        {
+            Destroy(gameObject); // Destrói a bullet ao colidir com a parede
+        }
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
 
+            collision.gameObject.GetComponent<TopDownEnemy>().TakeDamage(50); // dano ao atingir o enemy
+            Destroy(gameObject);
+        }
+    }
+   
 }

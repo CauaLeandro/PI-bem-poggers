@@ -5,19 +5,47 @@ using UnityEngine.UI;
 
 public class BarraDeVida : MonoBehaviour
 {
+    public float Life = 3f; // Vida atual do jogador
+    public float lifeMax = 3f; // Vida máxima do jogador
+    public Image healthBar; // Referência à barra de vida (UI)
 
-    public float lifeMax;
-    public float life;
-    public Image lifebar;
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        UpdateHealthBar(); // Inicializa a barra de vida no início
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage(float damage)
     {
-           lifebar.fillAmount = life / lifeMax;
+        Life -= damage; // Reduz a vida com base no dano recebido
+        if (Life < 0) Life = 0; // Garante que a vida não fique negativa
+        UpdateHealthBar(); // Atualiza a barra de vida
+
+        if (Life <= 0)
+        {
+            GameOver(); // Chama o método de fim de jogo
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Boss")) // Verifica se colidiu com algo da tag "Boss"
+        {
+            float bossDamage = collision.gameObject.GetComponent<NewFirstBoss>().damage; // Pega o dano do boss
+            TakeDamage(bossDamage); // Aplica o dano ao jogador
+        }
+    }
+
+    private void UpdateHealthBar()
+    {
+        if (healthBar != null)
+        {
+            healthBar.fillAmount = Life / lifeMax; // Atualiza a proporção da barra de vida
+        }
+    }
+
+    private void GameOver()
+    {
+        Debug.Log("Game Over");
+        // Aqui você pode adicionar lógica adicional, como reiniciar a cena ou exibir uma tela de game over
     }
 }

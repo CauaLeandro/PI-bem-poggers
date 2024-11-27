@@ -3645,7 +3645,6 @@ GameObject:
   - component: {fileID: 781263758}
   - component: {fileID: 781263760}
   - component: {fileID: 781263761}
-  - component: {fileID: 781263762}
   m_Layer: 0
   m_Name: saida
   m_TagString: Goku
@@ -3693,7 +3692,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 32767
   m_Sprite: {fileID: 21300000, guid: b5c6f203da849e64db2e2ba135fd989a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3758,27 +3757,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 24.11987, y: 21.191227}
   m_EdgeRadius: 0
---- !u!50 &781263762
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 781263757}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &783014584
 GameObject:
   m_ObjectHideFlags: 0

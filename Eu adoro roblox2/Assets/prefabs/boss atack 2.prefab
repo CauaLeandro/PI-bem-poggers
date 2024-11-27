@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4316783907408709876}
   - component: {fileID: 5902000891007795468}
   - component: {fileID: 3854646417073939853}
+  - component: {fileID: -7611467911716950696}
   m_Layer: 0
   m_Name: boss atack 2
   m_TagString: BalaDoBoss
@@ -123,3 +124,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-7611467911716950696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6399352268972023195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3e26968acec5c642b2af8d1d3da2b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10

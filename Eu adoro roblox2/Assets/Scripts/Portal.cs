@@ -20,21 +20,21 @@ public class Portal : MonoBehaviour
         {
             SceneManager.LoadScene("LAbirinto");
         }
-        if (collision.CompareTag("Goku"))
-        {
-            SceneManager.LoadScene("RabiesBoss");
-        }
         if (collision.CompareTag("Freeza"))
         {
             SceneManager.LoadScene("Creditos");
         }
         if (collision.CompareTag("Gohan"))
         {
-            SceneManager.LoadScene("Influenza boss battle");
+            SceneManager.LoadScene("NewFirstBoss");
         }
-        if (collision.CompareTag("Tenshinhan")) 
+        if (collision.CompareTag("Goku")) 
         {
-            SceneManager.LoadScene("TopDownBoss");
+            SceneManager.LoadScene("NewTopDownBoss");
+        }
+        if (collision.CompareTag("Bills"))
+        {
+            SceneManager.LoadScene("Menu");
         }
     }
 }

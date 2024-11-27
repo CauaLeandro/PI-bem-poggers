@@ -40,6 +40,9 @@ public class Player : MonoBehaviour
 
     [Header("animação")]
     Animator anim;
+
+    private float lastDamageTime = 0f; 
+    public float damageCooldown = 0.5f;
     void Start()
     {
         lifeMax = Life;
@@ -151,9 +154,15 @@ public class Player : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+       
         if (collision.gameObject.CompareTag("Boss"))
         {
-            TakeDamage(collision.gameObject.GetComponent<NewFirstBoss>().damage);
+            
+            if (Time.time >= lastDamageTime + damageCooldown)
+            {
+                TakeDamage(collision.gameObject.GetComponent<NewFirstBoss>().damage);
+                lastDamageTime = Time.time; 
+            }
         }
     }
 

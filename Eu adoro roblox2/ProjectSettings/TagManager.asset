@@ -18,6 +18,8 @@ TagManager:
   - BalaDoBoss
   - Gohan
   - Wilson
+  - Area
+  - Bills
   layers:
   - Default
   - TransparentFX

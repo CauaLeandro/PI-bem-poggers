@@ -29,7 +29,7 @@ public class Menu : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("Inicio");
+        SceneManager.LoadScene("NewFirstBoss");
     }
     public void AbrirOpçao()
     {

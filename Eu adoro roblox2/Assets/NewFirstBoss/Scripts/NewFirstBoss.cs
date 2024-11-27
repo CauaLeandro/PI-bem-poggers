@@ -5,84 +5,49 @@ using UnityEngine.UI;
 
 public class NewFirstBoss : MonoBehaviour
 {
-    public float life = 100f; 
-    public float maxLife = 100f; 
-    public float speed = 3f; 
-    public float damage = 1f;
+    public float life = 100f; // Vida do Boss
+    public float maxLife = 100f; // Vida máxima do Boss
+    public float damage = 10f; // Dano do Boss
 
-    public Image lifeBar; 
-    public Canvas lifeBarCanvas; 
-    private int direction = -1; 
+    public float speed = 3f;     // Velocidade de movimento do Boss
 
-    private Rigidbody2D rb;
+    private int direction = -1;  // Direção inicial do Boss
+    private Rigidbody2D rb; 
 
-    private float lastDamageTime; 
-    public float damageCooldown = 0.5f;
+    public GameObject objectToDeactivate; // Referência ao objeto associado que será desativado
+    public Image lifeBar; // Barra de vida do Boss
 
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+     
         UpdateLifeBar();
     }
 
-    void Update()
+    private void Update()
     {
         Move();
+        // Atualiza a barra de vida do Boss
+        UpdateLifeBar();
     }
-
     private void Move()
     {
-       
+        // Faz o Boss se mover de um lado para outro
         rb.velocity = new Vector2(speed * direction, rb.velocity.y);
     }
-
-    public void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-       // faz ele andar igual a um gumba XD
         if (collision.gameObject.CompareTag("Wall"))
         {
-            direction *= -1; 
+            direction *= -1; // Inverte a direção ao bater na parede
             Flip();
         }
-        
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            Bullet bulletScript = collision.gameObject.GetComponent<Bullet>();
-            if (bulletScript != null)
-            {
-                TakeDamage(bulletScript.damage);
-                Destroy(collision.gameObject); 
-            }
-        }
 
-
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            TakeDamage(10f);
-            Destroy(collision.gameObject); 
-        }
-        
-        
     }
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        // Aplica dano ao Player com cooldown
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Player playerScript = collision.gameObject.GetComponent<Player>();
-            if (playerScript != null && Time.time >= lastDamageTime + damageCooldown)
-            {
-                playerScript.TakeDamage(damage); // Aplica dano ao Player
-                lastDamageTime = Time.time; // Atualiza o tempo do último dano
-            }
-        }
-    }
+        
     public void TakeDamage(float amount)
     {
         life -= amount;
-        UpdateLifeBar();
-
         if (life <= 0)
         {
             Die();
@@ -91,23 +56,29 @@ public class NewFirstBoss : MonoBehaviour
 
     private void UpdateLifeBar()
     {
-        // Atualiza a barra de vida (proporção da vida atual para a máxima)
         if (lifeBar != null)
         {
             lifeBar.fillAmount = life / maxLife;
         }
     }
 
-    private void Flip()
-    {
-        // Inverte a escala para virar o sprite
-        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-    }
-
     private void Die()
     {
-        // Executa ações ao morrer (pode ser animação, som, etc.)
+        // Desativa o objeto associado
+        if (objectToDeactivate != null)
+        {
+            objectToDeactivate.SetActive(false); // Desativa o objeto
+            Debug.Log("Objeto associado desativado.");
+        }
+
+        // Destrói o Boss
         Destroy(gameObject);
+
         Debug.Log("Boss morreu!");
+    }
+    private void Flip()
+    {
+        // Inverte a escala para mudar a direção visual
+        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
     }
 }
