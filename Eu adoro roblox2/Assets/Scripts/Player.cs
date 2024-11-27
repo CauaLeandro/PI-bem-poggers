@@ -145,7 +145,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Boss"))
         {
-            TakeDamage(collision.gameObject.GetComponent<BossLegal>().damage);
+            TakeDamage(collision.gameObject.GetComponent<NewFirstBoss>().damage);
         }
     }
 
@@ -160,6 +160,11 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("Boss"))
+        {
+            float bossDamage = collision.gameObject.GetComponent<NewFirstBoss>().damage;
+            TakeDamage(bossDamage);
+        }
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
@@ -172,10 +177,18 @@ public class Player : MonoBehaviour
             isGrounded = false;
         }
     }
-        void GameOver()
+      void GameOver()
+      {
+        Debug.Log("Game Over!"); 
+        if (restartText != null)
         {
-       
+            restartText.SetActive(true);
         }
+        speed = 0f;
+        body.velocity = Vector2.zero;
+        Invoke("Restart", 3f);
+        Destroy(gameObject);
+      }
 
     public void Restart()
     {

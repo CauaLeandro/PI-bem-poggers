@@ -16,15 +16,12 @@ public class NewFirstBoss : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    private float lastDamageTime; 
+    public float damageCooldown = 0.5f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
-       
-        if (lifeBarCanvas != null)
-        {
-            lifeBarCanvas.enabled = false;
-        }
 
         UpdateLifeBar();
     }
@@ -40,48 +37,48 @@ public class NewFirstBoss : MonoBehaviour
         rb.velocity = new Vector2(speed * direction, rb.velocity.y);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        // Detecta colisão com BoxCollider e muda a direção
+       // faz ele andar igual a um gumba XD
         if (collision.gameObject.CompareTag("Wall"))
         {
-            direction *= -1; // Inverte a direção
+            direction *= -1; 
             Flip();
         }
-
-        // Detecta colisão com balas e reduz a vida do Boss
+        
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            TakeDamage(10f); // Reduz 10 de vida ao ser atingido
-            Destroy(collision.gameObject); // Destrói a bala
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        // Detecta entrada do jogador na área
-        if (other.CompareTag("Player"))
-        {
-            if (lifeBarCanvas != null)
+            Bullet bulletScript = collision.gameObject.GetComponent<Bullet>();
+            if (bulletScript != null)
             {
-                lifeBarCanvas.enabled = true; // Mostra a barra de vida
+                TakeDamage(bulletScript.damage);
+                Destroy(collision.gameObject); 
+            }
+        }
+
+
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            TakeDamage(10f);
+            Destroy(collision.gameObject); 
+        }
+        
+        
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        // Aplica dano ao Player com cooldown
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Player playerScript = collision.gameObject.GetComponent<Player>();
+            if (playerScript != null && Time.time >= lastDamageTime + damageCooldown)
+            {
+                playerScript.TakeDamage(damage); // Aplica dano ao Player
+                lastDamageTime = Time.time; // Atualiza o tempo do último dano
             }
         }
     }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        // Detecta saída do jogador da área
-        if (other.CompareTag("Player"))
-        {
-            if (lifeBarCanvas != null)
-            {
-                lifeBarCanvas.enabled = false; // Esconde a barra de vida
-            }
-        }
-    }
-
-    private void TakeDamage(float amount)
+    public void TakeDamage(float amount)
     {
         life -= amount;
         UpdateLifeBar();

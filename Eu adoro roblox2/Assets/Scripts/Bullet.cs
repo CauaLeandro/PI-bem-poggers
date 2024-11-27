@@ -7,12 +7,12 @@ public class Bullet : MonoBehaviour
     public Rigidbody2D rb;
     public int damage = 1;
     public float projectileForce = 500f;
-     RabiesBoss script;
+     NewFirstBoss script;
     // Start is called before the first frame update
     void Start()
     {
        
-        script= FindObjectOfType<RabiesBoss>();
+        script= FindObjectOfType<NewFirstBoss>();
             rb = GetComponent<Rigidbody2D>();
             rb.AddForce(transform.right * projectileForce); // Aplique a força
 
