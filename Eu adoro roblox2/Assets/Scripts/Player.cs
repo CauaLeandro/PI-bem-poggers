@@ -1,7 +1,5 @@
-using JetBrains.Annotations;
+
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -39,11 +37,15 @@ public class Player : MonoBehaviour
     private float lastShootTime = 0f;
 
     public Transform shootingPoint;
+
+    [Header("animação")]
+    Animator anim;
     void Start()
     {
         lifeMax = Life;
         body = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -88,7 +90,7 @@ public class Player : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         body.velocity = new Vector2(horizontal * speed, body.velocity.y);
-        
+        anim.SetBool ("andando", horizontal != 0);
        
         
 
@@ -107,9 +109,15 @@ public class Player : MonoBehaviour
         {
             Shoot();
             lastShootTime = Time.time; // Atualiza o tempo do último tiro
+            anim.SetBool("atirando", true);
+            StartCoroutine(VoltarDoTiro());
         }
     }
-
+    IEnumerator VoltarDoTiro()
+    {
+        yield return new WaitForSeconds(0.3f);
+        anim.SetBool("atirando", false);
+    }
     private void Shoot()
     {
 
