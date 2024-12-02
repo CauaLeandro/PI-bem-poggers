@@ -204,12 +204,12 @@ public class Player : MonoBehaviour
         speed = 0f;
         body.velocity = Vector2.zero;
         Invoke("Restart", 3f);
-        Destroy(gameObject);
+        
       }
 
     public void Restart()
     {
-        SceneManager.LoadScene("boss battle");
+        SceneManager.LoadScene("NewFirstBoss");
         Time.timeScale = 1;
     }
 }

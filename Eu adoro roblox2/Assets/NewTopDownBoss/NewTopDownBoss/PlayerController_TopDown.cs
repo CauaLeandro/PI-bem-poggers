@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class PlayerController_TopDown : MonoBehaviour
 {
+   
     public float moveSpeed = 5f; // Velocidade do player
     public GameObject bulletPrefab; // Prefab da bullet
     public Transform firePoint; // da onde a bala sai
@@ -61,5 +64,5 @@ public class PlayerController_TopDown : MonoBehaviour
         rbBullet.AddForce(direction * bulletSpeed, ForceMode2D.Impulse);
 
     }
-
+   
 }

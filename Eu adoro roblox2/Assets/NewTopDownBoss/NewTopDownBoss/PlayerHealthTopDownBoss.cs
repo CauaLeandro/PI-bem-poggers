@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerHealthTopDownBoss : MonoBehaviour
@@ -41,5 +42,6 @@ public class PlayerHealthTopDownBoss : MonoBehaviour
     {
         Debug.Log("Jogador morreu!");
         Destroy(gameObject);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
